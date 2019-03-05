@@ -1,0 +1,33 @@
+//-----------------------------------------------SECTION fotorama-king-services --------------------------------------------
+.fotorama-king-services
+  padding: 5% 0
+  p
+    margin: 30px 0
+    font-size: 18px
+  .fotorama
+    background-color: rgba($dark, .4)
+    &__nav
+      &-wrap
+        position: absolute
+        bottom: 15px
+        padding: 0 20px
+        width: 100%
+
+    &__thumb
+      border: 4px solid #fff
+      transition: border-color .5s ease
+      &-border
+        border-color: darken($accent, .2)
+        width: 101px!important
+        height: 60px!important
+    &__nav:after, &__stage:after, &__nav:before, &__stage:before
+      display: none
+
+
+/*---------------------------------------------MEDIA FOTORAMA-----------------------------------------------------*/
+// ≥992px
++media-breakpoint-down(md)
+
+  .fotorama-king-services .fotorama__nav-wrap
+    padding: 0 15px
+    bottom: 5px

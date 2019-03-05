@@ -1,0 +1,87 @@
+//-----------------------------------------------FOOTER---------------------------------------
+footer.footer-main
+  background-color: #242424
+  padding: 3% 0
+  color: #fff
+  font-size: 13px
+  .footer-column
+    margin: 15px 0
+  .logo-footer
+    width: 125px
+    height: auto
+    margin-bottom: 25px
+    + p
+      color: #666
+  nav.soc ul
+    display: flex
+    justify-content: space-between
+    li a
+      margin-bottom: 0
+      transition: color .5s ease
+  .footer-menu
+    ul
+      padding: 0
+      margin: 0
+      list-style-type: none
+      li.active
+        a
+          color: $accent
+          &::before
+            color: $accent
+      a
+        position: relative
+        color: #979797
+        text-decoration: underline
+        transition: color .25s ease
+        display: inline-block
+        padding: 4px 0 4px 20px
+        &:hover, &:focus
+          color: $accent
+          &::before
+            color: $accent
+        &::before
+          position: absolute
+          font-family: fontawesome
+          font-size: 12px
+          color: #fff
+          content: '\f219'
+          left: 0
+          top: 6px
+          transition: color .5s ease
+  .footer-addr
+    position: relative
+    font-size: 15px
+    padding-left: 25px
+    margin: 0 0 20px
+    .fa
+      position: absolute
+      left: 0
+      top: 0
+      color: #555
+      font-size: 20px
+    .footer-mobile
+      display: block
+      font: 26px firasans, sans-serif
+
+/*---------------------------------------------MEDIA FOOTER-----------------------------------------------------*/
+// ≥1200px
++media-breakpoint-down(lg)
+  footer.footer-main
+    nav.soc ul
+      justify-content: start
+      li
+        margin: 0 5px
+// ≥576px
++media-breakpoint-down(xs)
+  footer.footer-main
+    text-align: center
+    margin: 0 auto
+    .footer-menu
+      text-align: left
+      margin-left: 3px
+    nav.soc ul
+      justify-content: center
+    .footer-addr
+      text-align: left
+
+

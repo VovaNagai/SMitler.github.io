@@ -1,0 +1,123 @@
+//-----------------------------------------------SECTION s-call---------------------------------------
+
+section.s-call
+  background-size: contain
+  background-repeat: no-repeat
+  background-color: #fff
+  background-position: 20%
+  .success
+    display: none
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    font-weight: 800
+    text-transform: uppercase
+    z-index: 10
+    span
+      margin: auto
+    & ~ *
+      transition: all .5s ease
+    &.active
+      & ~ *
+        opacity: .5
+        filter: blur(10px)
+
+
+  &:before
+    content: ''
+    position: absolute
+    width: 50%
+    height: 100%
+    right: 0
+    background-color: rgba($accent, .92)
+  form.callback
+    padding: 25% 0
+    position: relative
+    .callback-logo
+      img
+        width: 100px
+        height: auto
+    .form-head
+      margin: 0
+      font-size: 30px
+      text-transform: uppercase
+      font-weight: 800
+    .selectize-input
+      font-size: 16px
+      border: 1px solid rgba(#000, .1)
+      border-bottom-width: 2px
+      border-radius: 2px
+      padding: 11px 22px
+      background-color: transparent
+      box-shadow: none
+      overflow: hidden
+      line-height: inherit
+      text-align: left
+      input
+        font-size: 16px
+
+      .item
+        color: #fff
+    input, textarea, select
+      color: #fff
+      width: 100%
+      margin-bottom: 15px
+      &::-webkit-input-placeholder
+        color: #fff
+        opacity: 1
+      &::-moz-placeholder
+        color: #fff
+        opacity: 1
+      &::-ms-input-placeholder
+        color: #fff   // opacity not use
+      option
+        color: #333
+    .button
+      margin-top: 30px
+    .selectize-control.single
+      .selectize-input, &.dropdown-active
+        &::after
+          border: none
+          content: '\f107'
+          color: #fff
+          font-family: fontawesome
+          position: absolute
+          right: 30px
+          top: 12px
+        &.dropdown-active::after
+          content: '\f106'
+
+      .selectize-dropdown
+        font-size: 15px
+        border: none
+        border-radius: 0
+        text-align: left
+        .option.active
+          background-color: lighten($accent, 20)
+        .optgroup-header, & [data-selectable]
+          padding: 10px 22px
+
+/*---------------------------------------------MEDIA SECTION s-call-----------------------------------------------------*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+  section.s-call
+    background-size: cover
+
+// ≥992px
++media-breakpoint-down(md)
+
+  section.s-call
+    &:before
+      width: 100%
+    .callback
+      padding: 13% 0
+      .button
+        display: block
+        margin: 30px auto 0 auto
+
+
+

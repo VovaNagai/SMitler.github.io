@@ -1,0 +1,90 @@
+//-----------------------------------------------SECTION carousel-services --------------------------------------------
+$colors: $blue, $red, $accent
+
+@for $i from 1 through length($colors)
+  .carousel-services .owl-item:nth-child(#{length($colors)}n+#{$i})
+    background-color: nth($colors, $i)
+
+.owl-carousel
+  .owl-item
+    backface-visibility: inherit
+.carousel-services
+  background-color: $dark
+  .owl-prev, .owl-next
+    width: 50px
+    height: 50px
+    background-color: #fff
+    text-align: center
+    font-size: 26px
+    line-height: 50px
+    font-weight: 800
+    position: absolute
+    top: 0
+  .owl-prev
+    left: 0
+  .owl-next
+    right: 0
+  .owl-item:nth-child(even) .carousel-services-item
+    flex-direction: column
+  &-item
+    position: relative
+    display: flex
+    flex-direction: column-reverse
+    text-align: center
+    color: #fff
+    font-size: 18px
+    font-weight: 300
+    &:hover
+      .carousel-services-img
+        opacity: 1
+  &-img
+    background-size: cover
+    background-position: center
+    opacity: .7
+    transition: opacity .7s ease
+  .name-services
+    span
+      font-weight: 300
+      font-size: 18px
+      display: block
+
+  .carousel-logo
+    img
+      width: 100px
+      height: auto
+      display: inline-block
+      margin-bottom: 10px
+  &-content
+    padding: 80px
+    position: relative
+  &-list
+    list-style-type: none
+    padding: 0
+    li
+      border-bottom: 1px solid rgba(#4a4a4a, .2)
+      &:last-child
+        border: none
+        margin-bottom: 40px
+      p
+        margin: 20px auto
+      strong
+        //font-size: 20px
+        color: #4a4a4a
+        font-family: firasans, sans-serif
+
+
+//---------------------------------------MEDIA SECTION carousel-services ----------------------------------------------
+//// ≥1200px
++media-breakpoint-down(lg)
+  .carousel-services
+    &-content
+      padding: 15px
+// ≤768px
++media-breakpoint-down(md)
+  .carousel-services
+    &-item
+      flex-direction: column
+
+
+
+

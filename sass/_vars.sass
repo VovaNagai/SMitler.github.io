@@ -1,0 +1,164 @@
+$default-font: "raleway", sans-serif
+$accent: #F9C766
+$blue: #66C7CD
+$red: #F86868
+$dark: #1a1a1a
+$over: #3D3C3C
+$fa-star-margin: 10px
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px
+$grid-columns: 12
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px)
+
+$gutter: $grid-gutter-width
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+html, body
+  height: 100%
+
+section, header
+  position: relative
+  background-size: cover
+  background-position: center
+
+section
+  background-color: #fff
+  h2
+    text-transform: uppercase
+    font-size: 30px
+    font-weight: 800
+  h2.title
+    color: $accent
+    span
+      color: #fff
+  &.inverse
+    color: #fff
+    background-color: $dark
+
+h1, h2, h3, h4, h5, h6
+  line-height: 1.6
+  text-transform: uppercase
+  &.h-first
+    color: $accent
+    span
+      color: #fff
+
+.site-header
+  color: #fff
+
+.text-center
+  text-align: center
+
+input, textarea, select, .selectize-input
+  display: inline-block
+  font-size: 16px
+  background-color: transparent
+  border: 1px solid rgba(#000, .1)
+  border-bottom-width: 2px
+  border-radius: 2px
+  padding: 8px 20px
+  outline: none
+  color: #fff
+  width: 100%
+
+button:focus
+  outline: none
+
+.s-overley
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: $over
+    opacity: .92
+
+body .top
+  position: fixed
+  width: 50px
+  height: 50px
+  bottom: 25px
+  right: -100px
+  background-color: #e0e0e0
+  z-index: 999
+  border-radius: 50%
+  color: #666
+  font-size: 26px
+  text-align: center
+  line-height: 50px
+  cursor: pointer
+  transition: all .25s ease
+  opacity: .5
+  &:hover
+    color: #fff
+    background-color: $accent
+    opacity: 1
+  &.active
+    right: 25px
+
+
+@mixin opacity($opacity)
+  opacity: $opacity / 100
+  filter: alpha(opacity = $opacity)
+
+.preloader
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 9999
+  background-color: $dark
+  .pulse
+    position: relative
+    top: 50vh
+    left: 50%
+    margin-left: -40px
+    margin-top: -40px
+    &::before, &::after
+      content: ''
+      position: absolute
+      border: 5px solid #323232
+      width: 80px
+      height: 80px
+      border-radius: 500px
+    &::before
+      animation: pulse-outer .8s ease-in infinite
+    &::after
+      animation: pulse-inner .8s linear infinite
+
+@keyframes pulse-outer
+  0%
+    @include opacity(100)
+  50%
+    @include opacity(50)
+  100%
+    @include opacity(0)
+
+@keyframes pulse-inner
+  0%
+    @include opacity(0)
+    transform: scale(0)
+  100%
+    @include opacity(100)
+    transform: scale(1)
+

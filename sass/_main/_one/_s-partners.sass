@@ -1,0 +1,50 @@
+//-----------------------------------------------SECTION s-partners---------------------------------------
+section.s-partners
+  padding: 5% 0
+  &:before
+    background-color: #fff
+  .title span
+    color: $accent
+  .partners
+    .partner
+      height: 100%
+      display: flex
+      margin: auto
+    .owl-stage
+      display: flex
+      .owl-item
+        margin-top: 30px
+        img
+          max-width: 100%
+          width: auto
+          display: inline-block
+          margin: auto
+    .owl-nav
+      position: absolute
+      top: 0
+      width: 100%
+      font-size: 40px
+      color: #999
+      .owl-prev
+        position: absolute
+        top: 33px
+        left: -30px
+        padding: 0 10px
+      .owl-next
+        position: absolute
+        right: -30px
+        top: 33px
+        padding: 0 10px
+/*---------------------------------------------MEDIA SECTION s-partners-----------------------------------------------------*/
+
+// ≥992px
++media-breakpoint-down(xs)
+  section.s-partners
+    padding: 10% 0
+    .partners
+      .owl-nav
+        .owl-prev
+          left: 0
+        .owl-next
+          right: 0
+

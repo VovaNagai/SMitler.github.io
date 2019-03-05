@@ -1,0 +1,72 @@
+//-----------------------------------------------SECTION s-review---------------------------------------
+section.s-review
+  padding: 5% 0
+  .quotes
+    position: absolute
+    width: 100%
+    &::before, &::after
+      content: ',,'
+      display: block
+      position: absolute
+      top: 182px
+      font-size: 56px
+      font-weight: 800
+      font-family: 'Times New Roman', serif
+      line-height: 0
+      transform: rotate(180deg)
+      color: $accent
+    &::before
+      left: -60px
+      top: 220px
+    &::after
+      right: -60px
+      transform: rotate(0)
+  .reviews
+    text-align: center
+    .owl-dots
+      width: 100%
+      text-align: center
+      .owl-dot
+        width: 8px
+        height: 8px
+        background-color: #ffffff
+        border-radius: 50%
+        display: inline-block
+        margin: 4px
+        transition: background-color .5s ease, transform .5s ease
+        &.active
+          background-color: $accent
+          transform: scale(1.3)
+  .review
+    margin-top: 20px
+    &-header
+      font: italic bold 30px "Times New Roman", sans-serif
+      margin-bottom: 20px
+    &-date
+      font: italic bold 14px "Times New Roman", sans-serif
+      color: #888
+      margin-bottom: 20px
+    &-stars
+      margin-bottom: 30px
+      color: $accent
+      .fa
+        margin: 0 3px
+    &-text
+      color: #95989a
+      margin-bottom: 30px
+
+
+/*---------------------------------------------MEDIA SECTION s-review-----------------------------------------------------*/
+
+// ≥992px
++media-breakpoint-down(md)
+  section.s-review
+    .review
+      &-text
+        color: #95989a
+        margin-bottom: 0
+// ≥576px
++media-breakpoint-down(xs)
+  section.s-review
+    .quotes
+      display: none
